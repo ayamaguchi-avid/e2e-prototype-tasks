@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Task 4 — Approve a payment</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="css/shared.css" />
+<link rel="stylesheet" href="css/tasks.css" />
+</head>
+<body class="task-page">
+  <div class="task-card">
+    <p class="task-kicker">Task 4 of 5</p>
+    <h1>Approve a payment &amp; find payment status</h1>
+    <p class="task-prompt">
+      Approve one of the time-sensitive invoices, then explain why it wasn't automatically
+      approved. Where would you go to check the status of payments and approvals?
+    </p>
+    <div class="task-actions">
+      <button class="btn btn-primary" id="beginBtn">Begin Task 4</button>
+    </div>
+  </div>
+  <script>
+    document.getElementById('beginBtn').addEventListener('click', function () {
+      sessionStorage.setItem('activeTask', '4');
+      // Clear prior approval state so every participant starts from the same
+      // pristine 8-row Time Sensitive table.
+      localStorage.removeItem('tsRow1Approved');
+      localStorage.removeItem('tsRow3Approved');
+      window.location.href = 'screens/invoice-home.html#time-sensitive';
+    });
+  </script>
+</body>
+</html>

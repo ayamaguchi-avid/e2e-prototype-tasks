@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Task 2 — Enroll in Priority Payments</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="css/shared.css" />
+<link rel="stylesheet" href="css/tasks.css" />
+</head>
+<body class="task-page">
+  <div class="task-card">
+    <p class="task-kicker">Task 2 of 5</p>
+    <h1>View the provider page &amp; enroll in Priority Payments</h1>
+    <p class="task-prompt">
+      From the Home page, find the provider you've connected and enroll it in Priority Payments.
+    </p>
+    <div class="task-actions">
+      <button class="btn btn-primary" id="beginBtn">Begin Task 2</button>
+    </div>
+  </div>
+  <script>
+    document.getElementById('beginBtn').addEventListener('click', function () {
+      sessionStorage.setItem('activeTask', '2');
+      window.location.href = 'screens/home-connected.html';
+    });
+  </script>
+</body>
+</html>
